@@ -1,0 +1,10 @@
+.watch-container {
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width : 1000px) {
+    .watch-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,35 @@
+.pop-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    margin: auto;
+    justify-content: center;
+    width: 90%;
+}
+.pop-box {
+    width: 270px;
+    cursor: pointer;
+}
+.pop-box:hover .thumbnails {
+    box-shadow: 0 0 13px gray;
+}
+.thumbnails {
+    width: 100%;
+    transition: .4s;
+    border-radius: 5px;
+}
+.title {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.channelTitle, .channelInfo {
+    font-size: 12px;
+    display: flex;
+    font-weight: 600;
+    color: gray;
+}

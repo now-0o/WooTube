@@ -1,0 +1,49 @@
+.side-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 30%;
+    margin-top: 10px;
+}
+.side-box {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+.side-thumbnails {
+    border-radius: 5px;
+    width: 200px;
+}
+.side-box:hover .side-thumbnails {
+    box-shadow: 0 0 13px gray;
+}
+.side-info-box {
+    width: 30%;
+}
+.side-title {
+    width: 100%;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.side-channelTitle, .side-channelViews {
+    font-size: 12px;
+    color: gray;
+}
+@media screen and (max-width : 1000px) {
+    .side-content {
+        width: 100%;
+        align-items: center;
+        padding: 5%;
+    }
+    .side-info-box {
+        width: 100%;
+    }
+    .side-title {
+        overflow: visible;
+        white-space: normal;
+        text-overflow: clip;
+    }
+}

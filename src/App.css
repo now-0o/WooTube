@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/* darkTheme */
+.App.darkTheme {
+    background-color: #2a2a2a;
+}
+.darkTheme {
+    color: white;
+    background-color: rgb(74, 74, 74);
+}
+.darkTheme .sidebar-container li:hover {
+    background-color: rgb(28, 28, 28);
+}
+.darkTheme .sidebar-container li.active {
+    background-color: rgb(28, 28, 28);
+}
+.darkTheme .video-more-info, .darkTheme .video-moreView-btn {
+    background-color: rgb(74, 74, 74);
+}

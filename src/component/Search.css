@@ -1,0 +1,21 @@
+.search-container {
+    display: flex;
+}
+@media screen and (max-width : 770px) {
+    .search-video-box {
+        flex-direction: column;
+        width: 100%;
+    }
+    .search-video-thumbnailsBox img {
+        width: 100%;
+    }
+    .search-channel-box {
+        justify-content: space-evenly;
+    }
+    .search-channel-thumbnailsBox {
+        width: 50%;
+    }
+    .search-channel-info {
+        width: 50%;
+    }
+}
