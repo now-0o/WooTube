@@ -28,6 +28,7 @@ const Watch = ({
                  setVideoInfo={setVideoInfo}
                  viewCalc={viewCalc}
                  youtubeSearch={youtubeSearch}
+                 setVideoId={setVideoId}
         />
     </div>
   )

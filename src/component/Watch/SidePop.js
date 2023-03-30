@@ -5,7 +5,8 @@ const SidePop = ({
     youtubePop,
     setVideoInfo,
     viewCalc,
-    youtubeSearch
+    youtubeSearch,
+    setVideoId
 }) => {
     let pops;
     youtubeSearch.items ? pops= youtubeSearch.items : pops = youtubePop.items
@@ -14,7 +15,7 @@ const SidePop = ({
         {
             pops.map(pop=>(
                 !(pop.id.kind && pop.id.kind.includes('channel')) && <li className='side-box'
-                    onClick={()=>{setVideoInfo(pop)}}
+                    onClick={()=>{setVideoInfo(pop); pop.id.kind ? setVideoId(pop.id.videoId) : setVideoId(pop.id)}}
                     key={pop.id}
                 >
                     <div className='side-thum-box'>
