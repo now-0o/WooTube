@@ -2,6 +2,7 @@ import './App.css'
 import Header from './component/Header';
 import Home from './component/Home';
 import Watch from './component/Watch';
+import ScrollToTop from './component/ScrollToTop';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
@@ -67,6 +68,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{darkTheme, setDarkTheme}}>
       <BrowserRouter>
+        <ScrollToTop />
         <div className={darkTheme? "App darkTheme" : "App"}>
           <Header sideActive={sideActive}
                   setSideActive={setSideActive}

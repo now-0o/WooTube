@@ -15,7 +15,7 @@ const SidePop = ({
         {
             pops.map(pop=>(
                 !(pop.id.kind && pop.id.kind.includes('channel')) && <li className='side-box'
-                    onClick={()=>{setVideoInfo(pop); pop.id.kind ? setVideoId(pop.id.videoId) : setVideoId(pop.id)}}
+                    onClick={()=>{setVideoInfo(pop); pop.id.kind ? setVideoId(pop.id.videoId) : setVideoId(pop.id); window.scrollTo(0,0)}}
                     key={pop.id}
                 >
                     <div className='side-thum-box'>
