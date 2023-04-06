@@ -11,10 +11,7 @@ const Header = ({
     sideActive,
     setSideActive,
     searchValue,
-    setSearchValue,
-    API_KEY,
-    youtubeSearchUrl,
-    youtubeSearchHandle
+    setSearchValue
 }) => {
     const navigate = useNavigate();
     const {darkTheme, setDarkTheme} = useContext(ThemeContext);
@@ -38,7 +35,6 @@ const Header = ({
                        onKeyDown={(e)=>{if(e.key === 'Enter'){
                                         setSearchValue(e.target.value);
                                         navigate(`./search/${e.target.value}`);
-                                        youtubeSearchHandle(e.target.value);
                                     }
                         }}
                 />

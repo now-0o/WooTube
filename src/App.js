@@ -18,7 +18,7 @@ function App() {
   const [videoInfo, setVideoInfo] = useState({});
   const [videoView, setVideoView] = useState(0);
   const [moreView, setMoreView] = useState(false);
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState(localStorage.getItem('searchValue'));
   const [videoId, setVideoId] = useState('');
 
   const API_KEY = process.env.REACT_APP_GOOGLE_KEY;
@@ -32,11 +32,11 @@ function App() {
       console.log(err);
     }
   }
-  const youtubeSearchHandle = async (searchValue)=>{
+  const youtubeSearchHandle = async ()=>{
     try{
       const res = await axios.get(`https://www.googleapis.com/youtube/v3/search?q=${encodeURI(searchValue)}&part=snippet&maxResults=24&regionCode=kr&key=${API_KEY}`);
       setYoutubeSearch(res.data);
-      console.log(youtubeSearch)
+      await console.log(youtubeSearch);
     }catch(err){
       console.log(err);
     }
@@ -63,7 +63,11 @@ function App() {
 
   useEffect(()=>{
     youtubePopHandle();
-  },[])
+  },[]);
+  useEffect(()=>{
+    localStorage.setItem('searchValue',searchValue);
+    youtubeSearchHandle();
+  },[searchValue]);
 
   return (
     <ThemeContext.Provider value={{darkTheme, setDarkTheme}}>
