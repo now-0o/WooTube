@@ -26,9 +26,9 @@
         width: 100%;
     }
     .title {
-        font-size: 24px;
+        font-size: 18px;
     }
     .channelTitle, .channelInfo {
-        font-size: 20px;
+        font-size: 14px;
     }
 }

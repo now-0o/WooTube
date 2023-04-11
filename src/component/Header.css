@@ -52,3 +52,10 @@ nav {
 .ham-menu {
     cursor: pointer;
 }
+
+
+@media screen and (max-width : 650px) {
+    .ham-menu {
+        display: none;
+    }
+}
